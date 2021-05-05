@@ -24,15 +24,15 @@ const Home = (props) => {
         ])
     })
 
-    const handleOnClick = (id) => {
-        props.history.push(`/workplace/${id}`)
+    const handleOnClick = (id, label) => {
+        props.history.push(`/workplace?id=${id}&label=${label}`)
     }
 
     return (
         <div>
             {workplaces.map((workplace) => {
                 return (
-                    <div className="pointer margin-bottom" onClick={() => { handleOnClick(workplace.id) }}>
+                    <div className="pointer margin-bottom" onClick={() => { handleOnClick(workplace.id, workplace.label) }}>
                         <h3>{workplace.label}</h3>
                     </div>
                 )

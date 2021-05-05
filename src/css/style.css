@@ -107,3 +107,12 @@ p {
     margin-bottom: 10px;
 }
 
+.btn-odustani {
+    margin-right: 10px;
+    padding: 5px 20px;
+    background-color: #444!important;
+    border: none!important;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}

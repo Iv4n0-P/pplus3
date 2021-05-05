@@ -34,9 +34,9 @@ const Open = (props) => {
                 {orders.map((order) => {
                     return (
                         <div className="order">
-                            <p><span className="bold">ID:</span> {order.id}</p>
-                            <p><span className="bold">LABEL:</span> {order.label}</p>
-                            <p><span className="bold">TIP:</span> <span className="col-primary">{order.course_name}</span></p>
+                        <p className="col-primary">{order.label}</p>
+                            <p><span className="bold">Stol:</span> {order.table}</p>
+                            <p><span className="bold">Tip:</span> <span>{order.course_name}</span></p>
                             {order.workorderitem_set.map((item) => {
                                 return (
                                     <p>

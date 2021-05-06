@@ -22,7 +22,7 @@ const Home = (props) => {
                 label: 'Barbecue'
             },
         ])
-    })
+    }, [])
 
     const handleOnClick = (id, label) => {
         props.history.push(`/workplace?id=${id}&label=${label}`)

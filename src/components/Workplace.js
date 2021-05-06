@@ -13,13 +13,16 @@ const Workplace = (props) => {
     const [key, setKey] = React.useState(1)
 
     const handleRefresh = () => {
-        setKey(key+1)
+        setKey(key + Math.random())
     }
 
     return (
         <div>
             <h3 className="title margin-bottom">{`Radno mjesto: ${label}`}</h3>
+            <div className="controls">
             <button className="btn-odustani margin-bottom" onClick={() => {props.history.goBack()}}>Povratak</button>
+            <button className="add-btn2 margin-bottom" onClick={handleRefresh}>Osvježi</button>
+            </div>
             <div className="wrap">
                 <Open key={Math.random() * key} id={id} handleRefresh={handleRefresh} />
                 <Inprocess key={Math.random() * key} id={id} handleRefresh={handleRefresh} />

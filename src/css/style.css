@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import './login.css';
 
 * {
     padding: 0;
@@ -82,7 +83,7 @@ p {
 .add-btn {
     cursor: pointer;
     width: 120px;
-    height: 25px;
+    height: 30px;
     background-color: var(--primary);
     border: none;
     margin-top: 10px;
@@ -91,7 +92,7 @@ p {
 .add-btn2 {
     cursor: pointer;
     width: 120px;
-    height: 25px;
+    height: 30px;
     background-color: #999;
     border: none;
     margin-top: 10px;
@@ -109,10 +110,11 @@ p {
 
 .btn-odustani {
     margin-right: 10px;
-    padding: 5px 20px;
     background-color: #444!important;
     border: none!important;
     color: white;
     cursor: pointer;
     font-family: inherit;
+    height: 30px;
+    width: 120px;
 }

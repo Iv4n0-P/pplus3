@@ -16,12 +16,21 @@ const Open = (props) => {
 
     const getOrders = async () => {      
         const { data } = await planplus.get(`/hr/work-orders/open/?work_place=${props.id}`)
-        setOrders(data.results)
+        if (data.results.length !== orders.length) {
+            setOrders(data.results)
+        }
+        return
     }
 
     React.useEffect(() => {
         getOrders()
     }, [])
+
+    React.useEffect(() => {
+        setInterval(() => {
+            getOrders()
+        }, 15000);
+    }) 
 
     const handleOnClick = async (id) => {
         const response = await planplus.put(`/hr/work-orders/set-in-process/${id}/`)

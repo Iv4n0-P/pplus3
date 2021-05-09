@@ -6,8 +6,8 @@ const Inprocess = (props) => {
     const planplus = axios.create({
         baseURL: 'https://pp.doubleclick.hr',
         auth: {
-            username: 'react@cirrus.hr',
-            password: 'plaNPlus'
+            username: props.user,
+            password: props.pass
         }
     })
 
@@ -33,30 +33,42 @@ const Inprocess = (props) => {
                 {orders.map((order) => {
                     return (
                         <div className="order">
-                        <p className="col-primary">{order.label}</p>
-                        <p><span className="bold">Stol:</span> {order.table}</p>
-                        <p><span className="bold">Tip:</span> <span>{order.course_name}</span></p>
-                            {order.workorderitem_set.map((item) => {
-                                return (
-                                    <p>
-                                        {item.item_name}
-                                    </p>
-                                )
-                            })}
-                            <button onClick={() => {handleOnClick(order.id)}} className="add-btn2">Stavi u završeno</button>
+                            <div className="col1">
+                                <p className="col-primary">{order.label}</p>
+                                <p><span className="bold">Stol:</span> {order.table}</p>
+                                <p><span className="bold">Tip:</span> <span>{order.course_name}</span></p>
+                                {order.workorderitem_set.map((item) => {
+                                    return (
+                                        <p>
+                                            {item.item_name}
+                                        </p>
+                                    )
+                                })}
+                            </div>
+                            <div onClick={() => { handleOnClick(order.id) }} className="btn">
+                                <p className="arr-ico">&rsaquo;</p>
+                            </div>
                         </div>
                     )
                 })}
-                
+
             </div>
-            
+
         )
     }
 
     return (
         <div className="w30perc">
-        <h4 className="subtitle margin-bottom">In process</h4>
-        {renderOrders()}
+            <h4 className="subtitle margin-bottom">In process</h4>
+            <div className="d2">
+            <div className="d3">
+                <div className="d4">
+                    <div className="d5">
+                        {renderOrders()}
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     )
 }

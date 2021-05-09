@@ -92,20 +92,48 @@ p {
 .add-btn2 {
     cursor: pointer;
     width: 120px;
-    height: 30px;
+    height: 40px;
     background-color: #999;
     border: none;
     margin-top: 10px;
-}
-
-.order-wrap {
-    
+    font-size: 16px;
+    font-family: inherit;
 }
 
 .order {
     background-color: rgba(40,43,46,1.0);
-    padding: 20px;
+    padding: 0px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #bbb;
+}
+
+.btn:hover .arr-ico {
+    color: #333;
+}
+
+.arr-ico {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.col1 {
+    padding: 15px;
 }
 
 .btn-odustani {
@@ -115,6 +143,52 @@ p {
     color: white;
     cursor: pointer;
     font-family: inherit;
-    height: 30px;
+    height: 40px;
     width: 120px;
+    font-size: 16px;
+}
+
+.workplace {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 20px 30px;
+    background: rgba(40,43,46,1.0);
+    color: white;
+    text-transform: uppercase;
+}
+
+.workplace:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.d2 {
+    height: 450px;
+    position: relative;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+.d3 {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.d4 {
+  position: relative;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.d4::-webkit-scrollbar { 
+    display: none; 
+    }
+
+.d5 {
+    height:2000px; 
 }

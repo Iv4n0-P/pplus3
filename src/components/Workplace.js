@@ -9,6 +9,8 @@ const Workplace = (props) => {
     const params = QueryString.parse(props.location.search)
     const id = Number(params.id)
     const label = params.label
+    const user = params.user
+    const pass = params.pass
 
     const [key, setKey] = React.useState(1)
 
@@ -24,9 +26,9 @@ const Workplace = (props) => {
             <button className="add-btn2 margin-bottom" onClick={handleRefresh}>Osvježi</button>
             </div>
             <div className="wrap">
-                <Open key={Math.random() * key} id={id} handleRefresh={handleRefresh} />
-                <Inprocess key={Math.random() * key} id={id} handleRefresh={handleRefresh} />
-                <Finished key={Math.random() * key} id={id} handleRefresh={handleRefresh} />
+                <Open key={Math.random() * key} id={id} user={user} pass={pass} handleRefresh={handleRefresh} />
+                <Inprocess key={Math.random() * key} id={id} user={user} pass={pass} handleRefresh={handleRefresh} />
+                <Finished key={Math.random() * key} id={id} user={user} pass={pass} handleRefresh={handleRefresh} />
             </div>
         </div>
     )

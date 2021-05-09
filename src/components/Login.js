@@ -25,7 +25,7 @@ const Login = (props) => {
 
         try {
             const data = await planplus.post('/hr/users/login/', loginDetailsForSend)
-            props.history.push(`/home/${user}`)
+            props.history.push(`/home?user=${user}&pass=${pass}`)
             } catch {
             setUser('')
             setPass('')
